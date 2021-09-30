@@ -21,7 +21,7 @@ Instructions to run this project locally (Windows):
         - docker exec -it theeyetest_web_1 python3 manage.py createsuperuser
 
     - Access the inteface at your browser 
-        - http://127.0.0.1:18000/user-session/
+        - http://127.0.0.1:18000/user-sessions/
 
     
 API - THE EYE SIMPLE DOCUMENTATION
