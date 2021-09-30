@@ -1,4 +1,4 @@
-#THE EYE
+THE EYE
 
 This is a practical test to the hiring proccess of ConsumerAffairs Company.
 The test consists in a collecting data of interactive events of user.
@@ -24,7 +24,7 @@ Instructions to run this project locally (Windows):
         - http://127.0.0.1:18000/user-session/
 
     
-#API - THE EYE SIMPLE DOCUMENTATION
+API - THE EYE SIMPLE DOCUMENTATION
 
     - Create a new UserSession 
 
