@@ -12,13 +12,12 @@ class UserSessionSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class UserSessionViewSet(viewsets.ModelViewSet):
+    print("**************************************")
     queryset = UserSession.objects.all()
     serializer_class = UserSessionSerializer
 
     def create(self, request, *args, **kwargs):
-        create_new_session.delay(
-            request=request.data
-        )
-        return Response({"Server Response": "Your data has been sent to a proccessing queue!"},
+        async_save = create_new_session.delay(request=request.data)
+        return Response({"Server Response": f"Your data has been sent to a proccessing queue!!{async_save}"},
                         status=status.HTTP_201_CREATED)
 

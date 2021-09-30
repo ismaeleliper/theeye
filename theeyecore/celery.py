@@ -10,17 +10,13 @@ app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
 
 
 @app.task
-def create(x, y):
-    return x + y
-
-
-@app.task
 def create_new_session(request):
     from api.models import UserSession
-    return UserSession.objects.create(
+    UserSession.objects.create(
         category=request['category'],
         name=request['name'],
         data=request['data']
     )
+    return True
 
 
